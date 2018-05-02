@@ -1,5 +1,5 @@
 const config = require('../../config/env/development');
-const user = require('../Model/user');
+const pessoa = require('../Model/pessoa');
 let obj = config.dataConfig.MYSQL;
 const Sequelize = require('sequelize');
 const sequelize = new Sequelize(obj.database, obj.user, obj.password, {
@@ -22,14 +22,5 @@ sequelize
   .catch(err => {
     console.error('Unable to connect to the database:', err);
   });
-
-async function get (userName, userPassword) {
-  return await user.user(sequelize, Sequelize).findOne({
-    where: {
-      USERNAME: userName,
-      PASSWORD: userPassword
-    }
-  });
-}
-
-module.exports = { get };
+  
+module.exports = {  };
