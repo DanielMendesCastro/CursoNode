@@ -1,9 +1,9 @@
 {
-  "name": "login",
+  "name": "nome API",
   "version": "1.0.0",
-  "description": "Api de Login ",
+  "description": "Descrição",
   "main": "index.js",
-  "author": "Nome ",
+  "author": "Nome",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
