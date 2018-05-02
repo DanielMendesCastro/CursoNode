@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "description": "Api de Login ",
   "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
-  "author": "Daniel Mendes",
+  "author": "Nome ",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
@@ -16,8 +13,5 @@
     "mysql": "^2.15.0",
     "mysql2": "^1.5.3",
     "sequelize": "^4.37.6"
-  },
-  "devDependencies": {
-    "nodemon": "^1.17.3"
   }
 }
