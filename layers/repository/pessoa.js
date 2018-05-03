@@ -22,5 +22,29 @@ sequelize
   .catch(err => {
     console.error('Unable to connect to the database:', err);
   });
-  
-module.exports = {  };
+
+async function get (cpf) {
+  return await pessoa.pessoa(sequelize, Sequelize).findOne({
+    where: {
+      cpf: cpf
+    }
+  });
+}
+
+async function getAll () {
+  return await pessoa.pessoa(sequelize, Sequelize).findAll();
+}
+
+async function post (p) {
+  await pessoa.pessoa(sequelize, Sequelize).create(p);
+}
+
+async function put (p) {
+  await pessoa.pessoa(sequelize, Sequelize).update(p, { where: { id: p.id } });
+}
+
+async function del (id) {
+  await pessoa.pessoa(sequelize, Sequelize).destroy({ where: { id: id } });
+}
+
+module.exports = { get, getAll, post, put, del };
